@@ -7,12 +7,11 @@ export default function Home() {
     console.log("🚀 -> handleClick -> handleClick");
 
     const response = axios
-      .get(
-        `https://www.facebook.com/v11.0/dialog/oauth?
-    client_id=${FB_APP_ID}
-    &redirect_uri=${REDIRECT_URI}
-    &state=${params}`
-      )
+      .get(`https://www.facebook.com/v11.0/dialog/oauth`, {
+        client_id: FB_APP_ID,
+        redirect_uri: REDIRECT_URI,
+        state: params,
+      })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
