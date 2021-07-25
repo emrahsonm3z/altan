@@ -3,7 +3,7 @@ module.exports = {
     return [
       {
         source: "/:path*",
-        destination: "https://api.example.com/:path*",
+        destination: "https://altan.vercel.app/:path*",
       },
     ];
   },
